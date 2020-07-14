@@ -241,6 +241,7 @@ system(@proglist);
 # Say the time on the local node
 #
 if ($Silent == "0") {
+        # This will transmit the time globally to all connected nodes. To only transmit locally, change 'rpt playback' to 'rpt localplay'.
 	@proglist = ("/usr/sbin/asterisk -rx \"rpt playback " . $mynode . " " . $outdir . "/current-time\"");
 	system(@proglist);
 	sleep(2);

@@ -5,10 +5,13 @@
 #
 # Usage:
 #
-#  ./say.sh welcome to the node
+#  ./say.sh 51865 welcome to the node
+#
+# The first argument is the allstar node number, subsequent arguments are the words to
+# be announced.
 
-for word in "$@"
+for word in "${@:2}"
 do
-  /usr/sbin/asterisk -rx "rpt playback 51865 ${word}" 
+  /usr/sbin/asterisk -rx "rpt playback ${1} ${word}" 
 done
 

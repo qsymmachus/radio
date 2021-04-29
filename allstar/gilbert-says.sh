@@ -6,7 +6,7 @@
 #
 #  ./gilbert-says.sh
 
-gilberts=("gilbert-free-radio" "gilbert-no-casuals" "gilbert-no-bathroom" "gilbert-please-pause", "gilbert-vibes")
+gilberts=("gilbert-free-radio" "gilbert-no-casuals" "gilbert-no-bathroom" "gilbert-please-pause")
 
 size=${#gilberts[@]}
 index=$(($RANDOM % $size))
